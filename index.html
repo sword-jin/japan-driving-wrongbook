@@ -201,40 +201,6 @@
     font-weight: 500;
   }
 
-  /* Memo toggle */
-  .card-memo {
-    padding: 0 16px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    background: #f8f6f0;
-    border-top: 0px solid #ece9e1;
-  }
-  .card-memo.open {
-    max-height: 200px;
-    padding: 12px 16px;
-    border-top: 1px solid #ece9e1;
-  }
-  .memo-label {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--ink-light);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .memo-input {
-    width: 100%;
-    border: none;
-    background: transparent;
-    font-size: 13px;
-    font-family: 'Noto Sans SC', sans-serif;
-    color: var(--ink-mid);
-    resize: none;
-    outline: none;
-    line-height: 1.6;
-  }
-
   .card-footer {
     padding: 8px 16px;
     display: flex;
@@ -272,17 +238,6 @@
     border-color: #8ce99a;
     color: var(--green);
   }
-  .memo-toggle {
-    font-size: 12px;
-    color: var(--ink-light);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'Noto Sans SC', sans-serif;
-    padding: 4px 0;
-  }
-  .memo-toggle:hover { color: var(--ink); }
-
   /* Empty state */
   .empty {
     text-align: center;
@@ -401,7 +356,7 @@
   <p>平安自動車学校 · 2026</p>
   <div class="stats">
     <div class="stat">
-      <div class="stat-num" id="totalCount">5</div>
+      <div class="stat-num" id="totalCount">25</div>
       <div class="stat-label">错题总数</div>
     </div>
     <div class="stat">
@@ -440,11 +395,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
 
@@ -464,11 +414,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
 
@@ -488,11 +433,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
 
@@ -512,13 +452,8 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
     </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
-    </div>
-  
+  </div>
 
 
   <div class="card" data-id="new0" data-correct="○" data-mastered="false">
@@ -537,11 +472,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new2" data-correct="○" data-mastered="false">
@@ -560,11 +490,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new3" data-correct="○" data-mastered="false">
@@ -583,11 +508,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new5" data-correct="×" data-mastered="false">
@@ -606,11 +526,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new6" data-correct="×" data-mastered="false">
@@ -629,11 +544,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new7" data-correct="×" data-mastered="false">
@@ -652,11 +562,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new8" data-correct="○" data-mastered="false">
@@ -675,11 +580,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new9" data-correct="×" data-mastered="false">
@@ -698,11 +598,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new12" data-correct="×" data-mastered="false">
@@ -721,11 +616,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new15" data-correct="×" data-mastered="false">
@@ -744,11 +634,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new18" data-correct="×" data-mastered="false">
@@ -767,11 +652,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
   <div class="card" data-id="new19" data-correct="×" data-mastered="false">
@@ -790,11 +670,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
 
@@ -815,11 +690,6 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
-    </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
     </div>
   </div>
 
@@ -840,11 +710,141 @@
     </div>
     <div class="card-footer">
       <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
-      <button class="memo-toggle" onclick="toggleMemo(this)">📝 备注</button>
     </div>
-    <div class="card-memo">
-      <div class="memo-label">我的备注</div>
-      <textarea class="memo-input" rows="3" placeholder="写下你的理解或记忆方法…"></textarea>
+  </div>
+
+  <div class="card" data-id="14" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-signal">标识</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='48' fill='white' stroke='%23c62828' stroke-width='12'/%3E%3Cline x1='28' y1='28' x2='92' y2='92' stroke='%23c62828' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E" alt="車両通行止め" style="width:130px;display:block;margin-bottom:10px;border-radius:6px">
+      <p class="question-text">图的标志是表示行人，汽车都不能通行。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">是「車両通行止め」的标志——禁止车辆通行，但行人可以通过。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="22" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-pedestrian">人行道</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="question-text">横穿人行道或路侧带时，如果附近没有行人的话，在横穿之前不停车也可以。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">即使没有行人，也必须在横穿前停车一次。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="5" data-correct="○" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-pedestrian">安全岛</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="question-text">安全岛只要有行人在的时候，汽车就不可以开入。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">无行人时也不许驶入。（正确答案选"正确"——题目说法本身成立；且无行人时同样禁止驶入。）</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="27" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-signal">标识</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='6' fill='%231565c0'/%3E%3Ctext x='60' y='38' text-anchor='middle' fill='white' font-family='sans-serif' font-size='18' font-weight='bold'%3E中央線%3C/text%3E%3Cpath d='M45,50 L75,50 L75,72 L90,72 L60,102 L30,72 L45,72 Z' fill='white'/%3E%3C/svg%3E" alt="中央線标识" style="width:130px;display:block;margin-bottom:10px;border-radius:6px">
+      <p class="question-text">有这样的标志的地方，要从「道路中心」的左侧通行。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">这是「中央线位置」的标志——要在标志（即中央线）的左侧通行，而不是"道路中心"的左侧。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="new20" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-signal">信号灯</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="question-text">在驾驶通过带信号灯管制交通的视线不良的交叉路口时，车辆要放慢速度。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">就题中的情况，不需要放慢速度——信号灯已经管制交通，按信号通行即可。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="9" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-parking">行车操作</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="question-text">在有禁止横穿或禁止调头标志的道路上，也不允许倒退。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">倒退不受到禁止——「禁止横穿」「禁止调头」的标志不包含「倒退」。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
+    </div>
+  </div>
+
+  <div class="card" data-id="12" data-correct="×" data-mastered="false">
+    <div class="card-header">
+      <span class="card-tag tag-parking">驾照</span>
+      <div class="stars" onclick="setStars(this, event)">
+        <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="question-text">持有准中型驾照者除准中型车辆以外还可以驾驶普通车辆、小型特殊车辆、轻便摩托车。</p>
+    </div>
+    <div class="card-answer wrong">
+      <span class="answer-icon">❌</span>
+      <span class="answer-text">普通驾照和准中型驾照都可以驾驶轻便摩托车。</span>
+    </div>
+    <div class="card-footer">
+      <button class="mastered-btn" onclick="toggleMastered(this)">✓ 标记已掌握</button>
     </div>
   </div>
 
@@ -873,13 +873,6 @@
     updateStats();
   }
 
-  function toggleMemo(btn) {
-    const card = btn.closest('.card');
-    const memo = card.querySelector('.card-memo');
-    memo.classList.toggle('open');
-    btn.textContent = memo.classList.contains('open') ? '📝 收起' : '📝 备注';
-  }
-
   function filterCards(type, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -902,6 +895,7 @@
   function updateStats() {
     const cards = document.querySelectorAll('.card');
     const mastered = [...cards].filter(c => c.dataset.mastered === 'true').length;
+    document.getElementById('totalCount').textContent = cards.length;
     document.getElementById('masteredCount').textContent = mastered;
     document.getElementById('remainCount').textContent = cards.length - mastered;
   }
