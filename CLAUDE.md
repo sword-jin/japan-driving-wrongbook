@@ -46,7 +46,8 @@ Steps:
 - `tag-pedestrian` (purple): 行人道 · 人行道 · 自行车横道 · 交叉路口 · 铁道口 · 紧急车辆 · 安全岛
 
 ### Conventions
-- `class="card-answer wrong"` and icon `❌` on every card — the style marks "a wrong-question entry in the book," not the boolean answer of the prompt. Put any 正确/错误 clarification in `.answer-text`.
+- `class="card-answer wrong"` on every card (the style marks "a wrong-question entry in the book").
+- Icon reflects the correct answer: `❌` when `data-correct="×"` (选错), `✅` when `data-correct="○"` (选对). Keep the icon and `data-correct` in sync.
 - Questions stay in simplified Chinese; keep Japanese sign/term names in 「 」 (e.g. 「車両通行止め」、「中央線」).
 - Sign images: inline SVG data-URL, width `130–170px`. Use `%23` for `#` in hex colors inside the URL.
 - Stars: three `<span class="star">`s; add `filled` class to light them up. 1★ easy, 2★ tricky, 3★ keeps tripping me up.
