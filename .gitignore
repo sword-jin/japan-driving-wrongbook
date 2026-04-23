@@ -6,9 +6,10 @@
 .idea/
 *.swp
 
-# Claude Code / OMC
+# Claude Code / OMC / Playwright MCP
 .claude/
 .omc/
+.playwright-mcp/
 
 # Node (in case tooling is added later)
 node_modules/
