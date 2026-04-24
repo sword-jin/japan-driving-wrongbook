@@ -8,7 +8,7 @@ const cards = [
   { id: "new3", correct: "○", tag: "超车", tagClass: "tag-parking", stars: 0, question: "在被超车时，被超车完了之前不得提速。", answer: "如题所述。（被超车期间不得提速，说法正确。）" },
   { id: "new5", correct: "×", tag: "交叉路口", tagClass: "tag-pedestrian", stars: 0, question: "与自己行驶方向交叉的道路是优先道路或宽幅较宽时，必须停车一次，不能妨碍在交叉道路上通行的车辆等的通行。", answer: "必须缓行，但不一定非要一时停车。" },
   { id: "new6", correct: "×", tag: "速度限制", tagClass: "tag-parking", stars: 0, question: "在普通道路上的普通汽车的法定最高速度是，普通汽车为每小时60公里，但是普通货车为每小时50公里。", answer: "在普通道路，汽车的最高限速都是时速60公里，小型摩托车不同。" },
-  { id: "new7", correct: "×", tag: "警察手势", tagClass: "tag-signal", stars: 0, question: "在十字路口当警察伸向东西方向的横举的手臂向上举起时，原则上东西方向的车辆不能超过停止位置而向前行进。", answer: "是与警察平行的交通，所以与黄色的信号是一样的意思。（即可以通行，而非停止。）" },
+  { id: "new7", correct: "○", tag: "警察手势", tagClass: "tag-signal", stars: 2, question: "在十字路口当警察伸向东西方向的横举的手臂向上举起时，原则上东西方向的车辆不能超过停止位置而向前行进。", answer: "如题所述。警察横举的手臂向上举起相当于黄色信号，还未越过停止位置的东西方向车辆必须停车，不能继续前进。" },
   { id: "new8", correct: "○", tag: "隧道", tagClass: "tag-parking", stars: 0, question: "在划分有车道的隧道内，超越了中型货车。", answer: "有车道划分的隧道内允许超车。（此行为合法，说法正确。）" },
   { id: "new9", correct: "×", tag: "内轮差", tagClass: "tag-parking", stars: 0, question: "内轮差是指汽车转弯时，前轮要比后轮通过内侧所产生的前后轮车辙的位置差异。", answer: "后轮比前轮的车辙靠里侧。（是后轮走内侧，不是前轮。）" },
   { id: "new12", correct: "×", tag: "铁道口", tagClass: "tag-pedestrian", stars: 0, question: "在通过视线良好的铁道口时，如果确认了安全，可以不必暂时停车。", answer: "与视线好坏无关，要暂时停一下车，确认了安全以后再通行。" },
@@ -26,6 +26,7 @@ const cards = [
   { id: "12", correct: "○", tag: "驾照", tagClass: "tag-parking", stars: 2, question: "持有准中型驾照者除准中型车辆以外还可以驾驶普通车辆、小型特殊车辆、轻便摩托车。", answer: "如题所述——正确答案是\"正确\"。准中型驾照可驾驶：准中型车辆 + 普通车辆 + 小型特殊车辆 + 轻便摩托车。" },
   { id: "6", correct: "×", tag: "行车操作", tagClass: "tag-parking", stars: 2, question: "即使是在单向通行的道路上，汽车不可以超过道路的中央偏右侧通行。", answer: "如果是单行道，也可以在右侧通行。" },
   { id: "new21", correct: "×", tag: "手势信号", tagClass: "tag-signal", stars: 2, question: "如图所示，当把右臂向车外斜下方伸出时，是表示倒车的信号。", answer: "是减速或停车的信号。" },
+  { id: "new22", correct: "○", tag: "标识", tagClass: "tag-signal", stars: 2, question: "在有此标志的地方，即使没感觉到危险，也要鸣笛。", answer: "如题所述。「警笛鳴らせ」标志的地点，不论是否感到危险都必须鸣笛。", sign: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='55' fill='%231565c0'/%3E%3Cpath d='M50 48 L38 56 L38 64 L50 72 L60 78 L60 42 Z' fill='white'/%3E%3Cpath d='M68 50 L78 60 L68 70' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M76 44 L90 60 L76 76' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" },
 ];
 
 function renderCards() {
