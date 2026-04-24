@@ -28,6 +28,7 @@ const cards = [
   { id: "new21", correct: "×", tag: "手势信号", tagClass: "tag-signal", stars: 2, question: "如图所示，当把右臂向车外斜下方伸出时，是表示倒车的信号。", answer: "是减速或停车的信号。" },
   { id: "new22", correct: "○", tag: "标识", tagClass: "tag-signal", stars: 2, question: "在有此标志的地方，即使没感觉到危险，也要鸣笛。", answer: "如题所述。「警笛鳴らせ」标志的地点，不论是否感到危险都必须鸣笛。", sign: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='55' fill='%231565c0'/%3E%3Cpath d='M50 48 L38 56 L38 64 L50 72 L60 78 L60 42 Z' fill='white'/%3E%3Cpath d='M68 50 L78 60 L68 70' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M76 44 L90 60 L76 76' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" },
   { id: "new23", correct: "×", tag: "信号灯", tagClass: "tag-signal", stars: 2, question: "正面的信号黄灯正在闪烁时，汽车必须徐行向前行驶。", answer: "不是徐行，是注意其它车辆向前行进。" },
+  { id: "25", correct: "×", tag: "人行道", tagClass: "tag-pedestrian", stars: 2, question: "汽车在无人行道或无划分车道的道路上，通过行人旁边时，必须缓行。", answer: "如有安全的间隔不一定要缓行。" },
 ];
 
 function renderCards() {
