@@ -19,7 +19,6 @@ Steps:
 
 ```js
 {
-  id: "<id>",               // test question number, or "new<n>" if unknown/colliding
   correct: "○" | "×",        // the ACTUAL correct answer of the true/false prompt
   tag: "<label>",           // e.g. "信号灯", "行车操作"
   tagClass: "tag-signal" | "tag-parking" | "tag-pedestrian",
