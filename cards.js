@@ -42,6 +42,8 @@ const cards = [
   { correct: "×", tag: "驾照", tagClass: "tag-parking", stars: 2, question: "取得大型特殊驾驶证，即使无拖车许可，也可拖曳不受总重量限制的车辆。", answer: "拖曳总重量超过750公斤的车辆需要「牽引免許」（牵引驾照）。仅凭大型特殊驾照，不能无限制拖曳重车。" },
   { correct: "×", tag: "行车操作", tagClass: "tag-parking", stars: 2, question: "骑摩托车遇到大地震时，靠路左停下，将方向盘锁住后避难。", answer: "靠路左停车、熄火后徒步避难是对的，但不要锁方向盘——应把钥匙留在车上，以便紧急车辆或救援人员需要时可以移动车辆。" },
   { correct: "×", tag: "行车操作", tagClass: "tag-parking", stars: 2, question: "摩托车刹车时，为防止前倾，应向后倾。", answer: "不是「向后倾」，而是身体不要被甩向前，保持稳定姿势——把力贯向脚踏以抵抗惯性，身体与车一起。" },
+  { correct: "×", tag: "行车操作", tagClass: "tag-parking", stars: 2, question: "车辆驾驶接近停留在车站的线路巴士时，在巴士启动发车之前要在其后停车等待。", answer: "不需要停车等到巴士发车——应在确认安全的同时继续行进。（注意：巴士打转向灯准备驶入车道时才必须让行。）" },
+  { correct: "×", tag: "超车", tagClass: "tag-parking", stars: 2, question: "在没有车辆通行带的路道内，禁止超车。", answer: "普通无车道道路并非一律禁止超车。禁止改道超车的是「没有车辆通行带的隧道」（既黑又窄又危险）。" },
 ];
 
 function renderCards() {
